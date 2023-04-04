@@ -46,5 +46,31 @@ _For a word c_:
 <br>
   
 ## P(w|c): Probability of the mistyped word w, given a candidate c
-  
-  
+
+It makes sense that a correct candidate c should not be too "far" from the mistyped word w. We will be using edit distance to measure the distance between words.
+
+<br>
+
+### Edit distance aka Levenshtein distance
+
+For any word, it can be transformed into another word _only_ using the following operations:
+1. Insertion: Add a character to the string.
+2. Deletion: Remove a character from the string.
+3. Substitution: Replace a character in the string with another character.
+<br>
+
+Each of these operations are given a cost of 1. So the edit distance between two words A and B would simply be the sum of costs of the operations required to turn A into B.
+
+Eg.
+A = Cat, B = Bat, C = Code, D = Ha
+* dist(A, B) = 1
+  * Substitute C with B
+
+* dist(A, C) = 3
+  * Substitute a with o
+  * Substitute t with d
+  * Insert e
+
+* dist(A, D) = 2
+  * Substitute C with H
+  * Delete t
