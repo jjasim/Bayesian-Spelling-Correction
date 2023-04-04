@@ -13,6 +13,8 @@ For this problem, we have the following files:
 
 With the advent of small screens on smartphones, mistyping words is a common annoyance. So, what if we implemented a way to correct mispellings using the bayes rule? I will be doing exactly that here.
 
+<br>
+
 ### Formulating the problem 
 
 For a mistyped word, w, we can have many candidate words c. Amongst the candidate words, we may or may not have the actual correct word.
@@ -27,6 +29,8 @@ Notice that P(w), that is the probability of a spelling error occuring, is const
 
 <img src="https://github.com/jjasim/bayesian-spelling-correction/blob/main/images/Capture2.PNG" alt="Maximisation problem" style="width: 45%; height: auto;"/>
 
+<br>
+
 ## P(c): Probability of candidate word
 
 For a given candidate word c, P(c) is essentially the probability of that  candidate word occuring. It makes intuitive sense that we have to take this into account for our calculation as if a candidate word is uncommon or doesn't exist (so P(c) ≈ 0), then it is lessly likely that the a user was trying to type that word.
@@ -38,6 +42,8 @@ _For a word c_:
   * P(c) = $\text{total occurances of c} \over \text{total occurances of all words}$
 * Else:
   * P(c) = 0
+
+<br>
   
 ## P(w|c): Probability of the mistyped word w, given a candidate c
   
