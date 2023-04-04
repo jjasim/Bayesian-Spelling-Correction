@@ -39,6 +39,6 @@ _For a word c_:
 * Else:
   * P(c) = 0
   
-  ## P(w|c): Probability of the mistyped word w, given a candidate c
+## P(w|c): Probability of the mistyped word w, given a candidate c
   
   
