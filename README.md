@@ -14,3 +14,4 @@ The goal is to use the Bayes rule to evaluate each candidate word c, and calcula
 
 Notice that P(w), that is the probability of a spelling error occuring, is constant across all of the candidates c. This is as we are comparing possible candidates c for the same mispelling w. So we can simplify our optimisation problem to:
 
+<img src="https://github.com/jjasim/bayesian-spelling-correction/blob/main/images/Capture2.PNG" alt="Maximisation problem">
