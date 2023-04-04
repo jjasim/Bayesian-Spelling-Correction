@@ -31,8 +31,10 @@ Notice that P(w), that is the probability of a spelling error occuring, is const
 
 For a given candidate word c, P(c) is essentially the probability of that  candidate word occuring. It makes intuitive sense that we have to take this into account for our calculation as if a candidate word is uncommon or doesn't exist (so P(c) ≈ 0), then it is lessly likely that the a user was trying to type that word.
 
-To determine this value, we can take a look at words.txt and derive the following:
+To determine this value, we can take a look at words.txt and derive the following:  
 
-_For a word c_:
-  If word exists in words.txt:
-$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+_For a word c_:  
+* If word exists in words.txt:  
+  * P(c) = $\text{total occurances of c} \over \text{total occurances of all words}$
+* Else:
+  * P(c) = 0
