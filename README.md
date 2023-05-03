@@ -74,3 +74,30 @@ A = Cat, B = Bat, C = Code, D = Ha
 * dist(A, D) = 2
   * Substitute C with H
   * Delete t
+
+So, it makes more sense that for a mistyped word it is more likely to be have a smaller edit distance. So that implies that:
+P(W|C1) > P(W|C2)
+
+So we need to select a distribution that allows us to draw probabilities for a given edit distance x such that:
+P(W|Cx) > P(W|Cx-1)
+
+To achieve this, I chose an exponential distribution.
+
+put img here
+P(W|Cx) = formula
+
+### Choosing λ for the exponential distribution
+
+λ was chosen based on out of sample test accuracy such that
+[img eqn]
+
+where P is the percentage of correctly guessed words
+      f is a function representing the test program that takes in values
+      t is the out-of-sample testset
+      λ is tuning parameter
+Solving this problem using scipy.Optimization, I calculated the value λ = 9.08732
+
+## Results
+So for our simple bayesian spelling correction, the out-of-sample performance at correcting errors was 76% at a speed of 10 words per second.
+
+Considering the relatively simple nature of this algorithm, this is good performance. Of course, this solution can be tweaked to give better performance.
