@@ -86,17 +86,22 @@ To achieve this, I chose an exponential distribution. </br>
 <img src="https://github.com/jjasim/bayesian-spelling-correction/blob/main/images/Capture5.JPG" style="width: 37%; height: auto;"/>
 
 ### Choosing λ for the exponential distribution
+</br>
+λ was chosen based on out of sample test accuracy such that it solves the following constrainted optimisation problem: </br>
+<img src="https://github.com/jjasim/bayesian-spelling-correction/blob/main/images/Capture6.JPG" style="width: 37%; height: auto;"/>
 
-λ was chosen based on out of sample test accuracy such that
-[img eqn]
+where P is the percentage of correctly guessed words </br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f is a function representing the test program that takes in values </br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t is the out-of-sample testset </br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;λ is tuning parameter </br>
 
-where P is the percentage of correctly guessed words
-      f is a function representing the test program that takes in values
-      t is the out-of-sample testset
-      λ is tuning parameter
-Solving this problem using scipy.Optimization, I calculated the value λ = 9.08732
+Solving this problem using scipy.Optimization, I calculated the value λ = 9.08732 </br>
+
+Notice that optimisation problem solves our original problem.
 
 ## Results
 So for our simple bayesian spelling correction, the out-of-sample performance at correcting errors was 76% at a speed of 10 words per second.
+</br>
+<img src="https://github.com/jjasim/bayesian-spelling-correction/blob/main/images/Capture7.JPG" style="width: 37%; height: auto;"/>
 
 Considering the relatively simple nature of this algorithm, this is good performance. Of course, this solution can be tweaked to give better performance.
