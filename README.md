@@ -92,7 +92,7 @@ To achieve this, I chose an exponential distribution. </br>
 
 where P is the percentage of correctly guessed words </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f is a function representing the test program that takes in values </br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t is the out-of-sample testset </br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x is the edit distance </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;λ is tuning parameter </br>
 
 Solving this problem using scipy.Optimization, I calculated the value λ = 9.08732 </br>
