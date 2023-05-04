@@ -75,14 +75,15 @@ A = Cat, B = Bat, C = Code, D = Ha
   * Substitute C with H
   * Delete t
 
-So, it makes more sense that for a mistyped word it is more likely to be have a smaller edit distance. So that implies that: </br>
+### Choosing P(w|c) based on edit distance
+Tt makes more sense that for a mistyped word it is more likely to be have a smaller edit distance. So that implies that: </br>
 <img src="https://github.com/jjasim/bayesian-spelling-correction/blob/main/images/Capture3.jpg" style="width: 30%; height: auto;"/>
 
 So we need to select a distribution that allows us to draw probabilities for a given edit distance x such that: <br/>
 <img src="https://github.com/jjasim/bayesian-spelling-correction/blob/main/images/Capture4.JPG" style="width: 21%; height: auto;"/>
 
 To achieve this, I chose an exponential distribution. </br>
-<img src="https://github.com/jjasim/bayesian-spelling-correction/blob/main/images/Capture5.JPG" style="width: 28%; height: auto;"/>
+<img src="https://github.com/jjasim/bayesian-spelling-correction/blob/main/images/Capture5.JPG" style="width: 37%; height: auto;"/>
 
 ### Choosing λ for the exponential distribution
 
